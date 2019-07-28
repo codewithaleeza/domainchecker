@@ -62,6 +62,10 @@
     echo "<p style='font-size:20px;text-align:center;'>Field Empty. Please enter domain name.
     </p>";
   }
+  else if (!is_valid_domain_name($domain2)) {
+    echo "<p style='font-size:20px;text-align:center;'>Invalid Domain name</p>";
+
+  }
  else if ( gethostbyname($domain) != $domain ) {
   echo "<p style='font-size:20px;text-align:center;'>Sorry but <u>$domain</u> is already Registered!</p>";
  }
@@ -71,6 +75,13 @@
  }
 
  }
+ $domain2=$_GET['domain'];
+ function is_valid_domain_name($domain2) {
+  // Thanks to http://stackoverflow.com/a/4694816
+  return (preg_match("/^([a-z\d](-*[a-z\d])*)(\.([a-z\d](-*[a-z\d])*))*$/i", $domain2) //valid chars check
+    && preg_match("/^.{1,253}$/", $domain2) //overall length check
+    && preg_match("/^[^\.]{1,63}(\.[^\.]{1,63})*$/", $domain2)   ); //length of each label
+}
 ?><hr>
 </div>
 </body>
