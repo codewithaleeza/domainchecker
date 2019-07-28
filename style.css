@@ -1,0 +1,70 @@
+body{
+  background: #77A1D3;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #E684AE, #79CBCA, #77A1D3);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #E684AE, #79CBCA, #77A1D3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+font-family: 'Poppins', sans-serif;
+/* font-family: 'Work Sans', sans-serif; */
+
+}
+img{
+  margin-top: 5%;
+}
+h1{
+  color:white;
+  margin-top: 5%;
+
+}
+select{
+  background-color: #bf4080;
+  color:white;
+}
+label{
+  color:white;
+  font-size: 19px;
+  text-align: center;
+}
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #bf4080;
+  border-right: none;
+  padding: 5px;
+  height: 36px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: black;
+  background-color:rgba(0,0,0,0) !important;
+}
+
+.searchTerm:focus{
+  color: black;
+  background-color:rgba(0,0,0,0) !important;
+
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #bf4080;
+  background: #bf4080;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
